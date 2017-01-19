@@ -1,14 +1,26 @@
 {
   "name": "demo.macleaner.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "macleaner",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --inline --hot --progress"
   },
-  "author": "Gleb",
-  "license": "ISC",
+  "keywords": [
+    "css",
+    "less",
+    "postcss",
+    "css-next",
+    "webpack",
+    "node modules",
+    "npm",
+    "yarn",
+    "bem"
+  ],
+  "author": "Gleb Selyukov",
+  "license": "MIT",
+  "repository": "https://github.com/prospik/demo.macl.git",
   "devDependencies": {
     "autoprefixer": "^6.6.1",
     "css-loader": "^0.26.1",
