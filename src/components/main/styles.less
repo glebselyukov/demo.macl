@@ -5,13 +5,16 @@
 /* VARIABLES LIKE @device, @device-area, @tablet, @tablet-area, @desktop, @desktop-area */
 /* AND NOT GOOGLE HOSTED FONTS */
 
+// Mode: Desktop
+@desktop: 1180px;
+@desktop-area: 1150px;
+
 // Mode: Tablet
 @tablet: 768px;
 @tablet-area: 90%;
 
-// Mode: Desktop
-@desktop: 1180px;
-@desktop-area: 1150px;
+@device: 767px;
+@device-area: 90%;
 
 .background {
   &__gradient {
@@ -23,7 +26,7 @@
       background: -o-linear-gradient(top, rgba(114,115,213,1) 0%, rgba(153,92,209,1) 100%);
       background: -ms-linear-gradient(top, rgba(114,115,213,1) 0%, rgba(153,92,209,1) 100%);
       background: linear-gradient(to bottom, rgba(114,115,213,1) 0%, rgba(153,92,209,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7273d5', endColorstr='#995cd1', GradientType=0 );
+      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7273d5', endColorstr='#995cd1', GradientType=0 );
     }
   }
 }
