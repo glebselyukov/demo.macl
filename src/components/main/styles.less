@@ -13,8 +13,12 @@
 @tablet: 768px;
 @tablet-area: 90%;
 
+// Mode: Device
 @device: 767px;
 @device-area: 90%;
+
+// Mode: Colors
+@yellow: rgba(255, 217, 37, 1);
 
 .background {
   &__gradient {
@@ -29,9 +33,6 @@
       //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7273d5', endColorstr='#995cd1', GradientType=0 );
     }
   }
-}
-
-.background {
   &__radial {
     &--violet {
       background-image: radial-gradient(69% -190%, #975CD1 9%, #955FD2 100%);

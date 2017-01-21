@@ -1,7 +1,7 @@
-var styles = require('./index.less');
-var statics = require.context("./assets/images/", true, /^.*/);
-var fonts = require.context("./assets/fonts/", true, /^.*/);
-var $ = require('jquery');
+const styles = require('./index.less');
+const statics = require.context("./assets/images/", true, /^.*/);
+const fonts = require.context("./assets/fonts/", true, /^.*/);
+const $ = require('jquery/dist/jquery.min.js');
 
 $('.nav__burger-menu').click(function () {
     if (!$(this).hasClass('nav__burger-menu--opened')) {
