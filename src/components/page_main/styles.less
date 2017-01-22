@@ -8,15 +8,99 @@
   src: url(assets/fonts/futura.ttf);
 }
 
+@font-face {
+  font-family: 'SFNS';
+  font-weight: 500;
+  font-style: normal;
+  src: url(assets/fonts/sfns-system.ttf);
+}
+
 body {
   background: #ffffff;
 }
 
 .section-1 {
-  width: 100px;
-
+  display: flex;
+  width: 100%;
+  height: 780px;
   &__inner {
-    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
   }
+  &__title {
+    color: #f2e7fe;
+    font-family: 'SFNS';
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  &__phrase {
+    color: #ffffff;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 19px;
+    margin-bottom: 15px;
+  }
+  &__description {
+    width: 482px;
+    color: #f2e6fe;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin: 0 auto 25px;
+  }
+  &__button {
+    &--item1 {
+      display: inline-flex;
+      width: 140px;
+      height: 40px;
+      border: 1px solid #ffd925;
+      border-radius: 30px;
+      text-align: center;
+      background: #ffd925;
+      transition: .7s ease;
+      color: #484bff;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto';
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 19px;
+      margin-right: 15px;
+      &:hover {
+        background: transparent;
+        border: 1px solid #ffd925;
+        color: #ffd925;
+      }
+    }
+    &--item2:extend(&--item1) {}
+    &--item2 {
+      background: transparent;
+      border: 1px solid #ffd925;
+      color: #ffd925;
+      margin-right: 0;
+      &:hover {
+        background: #ffd925;
+        color: #484bff;
+      }
+    }
+  }
+  &__macbook {
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+  }
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 100%;
 
+  }
 }

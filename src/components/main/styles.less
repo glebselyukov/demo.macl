@@ -2,6 +2,20 @@
    MAIN
    ========================================================================== */
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* VARIABLES LIKE @device, @device-area, @tablet, @tablet-area, @desktop, @desktop-area */
 /* AND NOT GOOGLE HOSTED FONTS */
 
@@ -20,6 +34,15 @@
 // Mode: Colors
 @yellow: rgba(255, 217, 37, 1);
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__content {
+    flex: 1 0 auto;
+  }
+}
+
 .background {
   &__gradient {
     &--violet {
@@ -37,5 +60,22 @@
     &--violet {
       background-image: radial-gradient(69% -190%, #975CD1 9%, #955FD2 100%);
     }
+  }
+}
+
+.rectangle {
+  position: relative;
+  transform: rotate(-35deg);
+  &--violet {
+    border-radius: 18px;
+    background-color: #967dd0;
+  }
+  &--red {
+    border-radius: 18px;
+    background-color: #ef4b93;
+  }
+  &--yellow {
+    border-radius: 18px;
+    background-color: #ffe152;
   }
 }
