@@ -56,7 +56,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new ExtractTextPlugin('[name].bundle.css')
+        new ExtractTextPlugin('[name].bundle.css'),
         // new webpack.HotModuleReplacementPlugin(),
         // new webpack.NoEmitOnErrorsPlugin()
     ]
