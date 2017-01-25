@@ -11,6 +11,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
         main: './index.js'
+        // page_single: './page_single.js'
         //     [
         //     // 'webpack-dev-server/client?' + require("ip").address() + ':8080/',
         //     // 'webpack-hot-middleware/client',
@@ -53,7 +54,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     plugins: [
         new ExtractTextPlugin('[name].bundle.css'),

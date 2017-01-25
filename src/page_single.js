@@ -1,0 +1,1 @@
+const stylePageSingle = require('./page_single.less');
