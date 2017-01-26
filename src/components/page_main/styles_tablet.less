@@ -1,0 +1,47 @@
+@media (min-width: @desktop) {
+  .wrapper-area {
+    width: @desktop-area;
+  }
+}
+
+@media (max-width: @desktop) {
+  .wrapper-area {
+    width: @tablet-area;
+  }
+
+  .section-3 {
+    height: 100%;
+    &__inner {
+      width: @tablet-area;
+    }
+    &__row {
+      width: 100%;
+      flex-flow: column wrap;
+    }
+    &-row {
+      &--left {
+        align-self: center;
+        margin-bottom: 50px;
+      }
+      &--right {
+        align-self: center;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+    }
+    &__name {
+      align-self: center;
+      flex-flow: column wrap;
+    }
+    &__text {
+      text-align: center;
+    }
+    &__list-column {
+      align-self: center;
+    }
+    &__phrase {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}
