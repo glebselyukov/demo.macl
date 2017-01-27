@@ -1,0 +1,27 @@
+/* ==========================================================================
+   MENUS (HEADER AND FOOTER) !DEVICE!
+   ========================================================================== */
+
+@media (max-width: @device) {
+  .header {
+    &__nav {
+      &--first {
+        width: 250px;
+      }
+    }
+    &__phrases {
+      &:last-child {
+        display: none;
+      }
+      &:not(:last-child) {
+        display: inline-flex;
+        flex: 2;
+        width: auto;
+      }
+    }
+    &__href {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

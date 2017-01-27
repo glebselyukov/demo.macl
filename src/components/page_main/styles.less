@@ -1,6 +1,7 @@
 /* ==========================================================================
    PAGE-MAIN
    ========================================================================== */
+
 @font-face {
   font-family: 'Futura';
   font-weight: 400;
@@ -22,7 +23,7 @@ body {
 .section-1 {
   display: flex;
   width: 100%;
-  height: 780px;
+  //height: 780px;
   margin-top: 50px;
   &__inner {
     justify-content: center;
@@ -56,6 +57,7 @@ body {
     margin: 0 auto 25px;
   }
   &__button {
+    display: inline-flex;
     &--item1 {
       display: inline-flex;
       width: 140px;
@@ -96,22 +98,26 @@ body {
   &__macbook {
     display: flex;
     align-self: flex-end;
+    justify-content: center;
     width: 100%;
   }
   &__image {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
+    //position: absolute;
+    //bottom: 0;
+    //left: 50%;
+    //transform: translate(-50%);
+    //width: 100%;
+    //height: auto;
+    //max-width: 1063px;
     width: 100%;
-    height: auto;
     max-width: 1063px;
-
+    height: 100%;
+    margin-top: 40px;
   }
 }
 
 .section-2 {
-  height: 662px;
+  height: 100%;
   overflow: hidden;
   &__inner {
     display: flex;
@@ -119,7 +125,7 @@ body {
     flex-flow: column wrap;
     width: @desktop-area;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 120px auto;
     padding-top: 100px;
     position: relative;
   }
@@ -332,7 +338,7 @@ body {
 }
 
 .section-3 {
-  height: 701px;
+  height: 100%;
   font-family: 'Lato';
   &__inner:extend(.section-2__inner) {}
   &__row:extend(.section-2__row) {
@@ -449,12 +455,9 @@ body {
 }
 
 .section-4 {
-  height: 1136px;
+  height: 100%;
   font-family: 'Lato';
   &__inner:extend(.section-2__inner) {}
-  &__inner {
-    padding-top: 100px;
-  }
   &__row:extend(.section-2__row) {
     width: @desktop-area;
     justify-content: center;
@@ -534,12 +537,9 @@ body {
 }
 
 .section-6 {
-  height: 1277px;
+  height: 100%;
   font-family: 'Lato';
   &__inner:extend(.section-2__inner) {}
-  &__inner {
-    padding-top: 100px;
-  }
   &__row:extend(.section-2__row) {
     width: @desktop-area;
     justify-content: center;
@@ -621,11 +621,8 @@ body {
 }
 
 .section-7 {
-  height: 958px;
+  height: 100%;
   &__inner:extend(.section-2__inner) {}
-  &__inner {
-    padding-top: 100px;
-  }
   &__row:extend(.section-2__row) {}
   &__row {
     width: @desktop-area;
@@ -695,11 +692,8 @@ body {
 }
 
 .section-8 {
-  height: 498px;
+  height: 100%;
   &__inner:extend(.section-2__inner) {}
-  &__inner {
-    padding-top: 100px;
-  }
   &__row:extend(.section-2__row) {}
   &__row {
     width: @desktop-area;
@@ -755,7 +749,7 @@ body {
     color: #F2E6FE;
     letter-spacing: 0;
     text-align: center;
-    margin: -15px 0 35px 0;
+    margin-top: -15px;
   }
   &__phrase {
     font-size: 14px;
@@ -769,7 +763,7 @@ body {
 }
 
 .section-9 {
-  height: 1522px;
+  height: 100%;
   &__row:extend(.section-2__row) {}
   &__row {
     width: 896px;
@@ -777,7 +771,7 @@ body {
   &-row:extend(.section-2-row) {}
   &__inner:extend(.section-2__inner) {}
   &__inner {
-
+    margin: 0 auto 50px auto;
   }
   &__phrase:extend(.section-2__phrase) {}
   &__phrase {
@@ -817,7 +811,7 @@ body {
     &--imac {
       width: 100%;
       max-width: 885px;
-      height: auto;
+      height: 100%;
     }
   }
   &__list-column:extend(.section-3__list-column) {}

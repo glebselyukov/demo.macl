@@ -1,3 +1,7 @@
+/* ==========================================================================
+   PAGE-MAIN !TABLET!
+   ========================================================================== */
+
 @media (min-width: @desktop) {
   .wrapper-area {
     width: @desktop-area;
@@ -9,12 +13,26 @@
     width: @tablet-area;
   }
 
+  .section-1 {
+    //height: 750px;
+  }
+
   .section-2 {
+    height: 1105px;
     &__inner {
       width: auto;
     }
     &__row {
       width: @tablet-area;
+      flex-flow: column wrap;
+    }
+    &__phrase {
+      display: inline-block;
+      width: 90%;
+      text-align: center;
+    }
+    &-row {
+      align-self: center;
     }
   }
 
@@ -52,5 +70,64 @@
       margin-left: 0;
       text-align: center;
     }
+  }
+
+  .section-4 {
+    &-row {
+      &--center {
+        align-self: center;
+      }
+    }
+  }
+
+  .section-6 {
+    height: 1077px;
+    &-row {
+      &--center {
+        align-self: center;
+      }
+    }
+  }
+
+  .section-7 {
+    height: 520px;
+    &__screen {
+      display: none;
+    }
+    &-row {
+      &--wrapper {
+        width: 100%;
+        max-width: 590px;
+        flex-flow: row wrap;
+      }
+    }
+    &__illustration {
+      margin-bottom: 25px;
+    }
+    &__phrase {
+      margin-left: 10px;
+    }
+  }
+
+  .section-8 {
+    height: 800px;
+    &__row {
+      &--wrapper {
+        flex-flow: column wrap;
+        align-self: center;
+        margin-bottom: 0;
+      }
+      &--item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .section-9 {
+    height: 1400px;
+  }
+
+  ul.tabs {
+    display: none;
   }
 }
