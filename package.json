@@ -1,6 +1,6 @@
 {
   "name": "demo.macleaner.com",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "macleaner",
   "main": "index.js",
   "scripts": {

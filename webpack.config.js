@@ -43,7 +43,21 @@ module.exports = {
             {
                 test: /\.(jpg|jpeg|gif|png)$/,
                 exclude: /node_modules/,
-                loader: 'file-loader?publicPath=../&name=./assets/images/[name].[ext]'
+                loaders: [
+                    'file-loader?publicPath=../&name=./assets/images/[name].[ext]',
+                    {
+                        loader: 'image-webpack-loader',
+                        query: {
+                            progressive: true,
+                            optimizationLevel: 7,
+                            interlaced: false,
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
+                            }
+                        }
+                    }
+                ]
             },
             {
                 test: /\.[ot]tf$/,
