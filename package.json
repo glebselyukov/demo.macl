@@ -1,6 +1,6 @@
 {
   "name": "demo.macleaner.com",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "macleaner",
   "main": "index.js",
   "scripts": {
@@ -50,6 +50,8 @@
     "postcss-less-engine": "^0.6.2",
     "postcss-loader": "^1.2.2",
     "postcss-sorting": "^2.0.1",
+    "resolve-url-loader": "^1.6.1",
+    "source-map-loader": "^0.1.6",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.7",

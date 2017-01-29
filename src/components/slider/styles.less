@@ -1,0 +1,28 @@
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url(assets/images/slider-arrow.png);
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url(assets/images/slider-arrow.png);
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev, .swiper-button-next {
+  top: 40%;
+  width: 29px;
+  height: 29px;
+  background-size: 29px 29px;
+}
+
+.swiper-slide {
+  justify-content: space-around;
+}
+
+@media (max-width: 1350px) {
+  .swiper-slide {
+    flex-direction: column;
+  }
+  .swiper-slide:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+}

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-var menu = $('.nav__burger-menu').click(function () {
+let menu = $('.nav__burger-menu').click(function () {
     if (!$(this).hasClass('nav__burger-menu--opened')) {
         $('.nav__ul').fadeToggle(300, 'linear');
     }
@@ -10,4 +10,14 @@ var menu = $('.nav__burger-menu').click(function () {
     $(this).toggleClass('nav__burger-menu--opened');
 });
 
-export default menu;
+let tabs = $('ul.tabs li').click(function(){
+    let tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+});
+
+export {menu, tabs};

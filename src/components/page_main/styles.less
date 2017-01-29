@@ -42,7 +42,7 @@ body {
     color: #ffffff;
     font-family: 'Raleway';
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
     line-height: 19px;
     margin-bottom: 15px;
@@ -52,7 +52,7 @@ body {
     color: #f2e6fe;
     font-family: 'Lato';
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 17px;
     margin: 0 auto 25px;
   }
@@ -145,7 +145,7 @@ body {
     position: relative;
     font-family: 'Lato';
     font-size: 28px;
-    font-weight: 200;
+    font-weight: 300;
     color: #654C7D;
     letter-spacing: 0;
     line-height: 36px;
@@ -400,7 +400,7 @@ body {
     z-index: 2;
   }
   &__phrase {
-    width: 306px;
+    width: 305px;
     font-size: 28px;
     font-weight: 500;
     color: #654C7D;
@@ -426,7 +426,7 @@ body {
       height: 270px;
       font-family: 'Lato';
       font-size: 16px;
-      font-weight: 200;
+      font-weight: 300;
       color: #37244A;
       letter-spacing: 0;
       &--item-1 {
@@ -533,7 +533,94 @@ body {
 }
 
 .section-5 {
-  height: 806px;
+  height: 100%;
+  font-family: 'Lato';
+  &__row:extend(.section-2__row) {  }
+  &__row {
+    width: 100%;
+    flex-flow: column wrap;
+    &--item:extend(.section-3__row--item) {}
+  }
+  &-row:extend(.section-2-row) {}
+  &-row {
+    &--left:extend(.section-3-row--left) {}
+    &--left {
+      text-align: left;
+      flex-flow: column wrap;
+    }
+    &--right:extend(.section-3-row--right) {}
+    &--right {
+      flex-flow: column wrap;
+    }
+    &--left-image {
+      width: auto;
+    }
+    &--right-text {
+      width: 476px;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  &__inner:extend(.section-2__inner) {}
+  &__inner {
+    width: calc(@desktop-area + 150px);
+    margin: 0 auto 100px auto;
+  }
+  &__name:extend(.section-3__name) {}
+  &__name {
+    width: 305px;
+    height: 125px;
+  }
+  &__phrase:extend(.section-3__phrase) {}
+  &__phrase {
+    color: #654c7d;
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  &__phrases:extend(.section-2__phrase) {}
+  &__phrases {
+    display: inline-block;
+    width: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+    &--item {
+      display: inline-block;
+      font-weight: 700;
+    }
+  }
+  &__text:extend(.section-3__text) {}
+  &__illustration {
+    width: 74px;
+    height: 26px;
+    margin-bottom: 100px;
+  }
+  &__icon {
+    width: 110px;
+    height: 95px;
+    &-name:extend(.section-3__icon-name) {}
+  }
+  &__screen {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+  }
+  &__image {
+    width: inherit;
+    height: inherit;
+  }
+  &__list-column:extend(.section-3__list-column) {}
+  &__list-column {
+    height: 109px;
+    &--item-1:extend(.section-3__list-column--item-1) {}
+    &--item-2:extend(.section-3__list-column--item-2) {}
+  }
+  &__list {
+    &-item:extend(.section-3__list-item) {}
+    &-icon:extend(.section-3__list-icon) {}
+    &-image:extend(.section-3__list-image) {}
+  }
 }
 
 .section-6 {
@@ -863,6 +950,10 @@ body {
   }
 }
 
+.xs-visible {
+  display: none;
+}
+
 ul.tabs{
   width: 90%;
   display: flex;
@@ -911,4 +1002,52 @@ ul.tabs li.current::after {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1350px) {
+  .section-5 {
+    height: 100%;
+    &__inner {
+      width: @tablet-area;
+    }
+    &__row {
+      width: 100%;
+      flex-flow: column wrap;
+    }
+    &-row {
+      &--left {
+        align-self: center;
+        margin-bottom: 50px;
+        &-image {
+          margin-bottom: 30px;
+        }
+      }
+      &--right {
+        align-self: center;
+        align-items: center;
+        margin-bottom: 30px;
+        &-text {
+          margin-bottom: 50px;
+        }
+      }
+
+    }
+    &__name {
+      align-self: center;
+      flex-flow: column wrap;
+    }
+    &__text {
+      text-align: center;
+    }
+    &__list-column {
+      align-self: center;
+      &--center {
+        justify-content: center;
+      }
+    }
+    &__phrase {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
 }

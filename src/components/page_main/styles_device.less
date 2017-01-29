@@ -4,9 +4,22 @@
 
 @media (max-width: @device){
   .section-1 {
+    margin-top: 25px;
     &__description {
       width: 100%;
       max-width: 700px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__button {
+      &--item1 {
+        width: 125px;
+        margin-right: 5px;
+      }
+      &--item2 {
+        margin-right: 0;
+      }
     }
   }
 
@@ -15,8 +28,11 @@
     padding-bottom: 15px;
     &__inner {
       padding-top: 40px;
+      margin: 0 auto 30px auto;
     }
     &__phrase {
+      font-size: 22px;
+      line-height: 28px;
       &--reason {
         display: none;
       }
@@ -32,6 +48,10 @@
       &--right {
         margin-bottom: 50px;
       }
+    }
+    &__phrase {
+      font-size: 22px;
+      line-height: 28px;
     }
     &__list {
       &-icon {
@@ -69,11 +89,48 @@
         width: 100%;
       }
     }
+    &__title {
+      font-size: 22px;
+      line-height: 28px;
+    }
     &__screen {
       margin-bottom: 33px;
     }
     &__button {
       margin-bottom: 50px;
+    }
+  }
+
+  .section-5 {
+    &-row {
+      &--left {
+        margin-bottom: 60px;
+      }
+    }
+    &__inner {
+      margin: 0 auto;
+    }
+    &__list {
+      &-column {
+        height: 100%;
+        &--item-1 {
+          width: 100%;
+        }
+      }
+      &-item {
+        height: 35px;
+      }
+    }
+    &__phrase {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    &__phrases {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    &__illustration {
+      margin-bottom: 45px;
     }
   }
 
@@ -90,6 +147,10 @@
     }
     &__image {
       height: inherit;
+    }
+    &__title {
+      font-size: 22px;
+      line-height: 28px;
     }
     &__text {
       margin-bottom: 14px;
@@ -115,6 +176,10 @@
       text-align: initial;
       flex: 2;
     }
+    &__title {
+      font-size: 20px;
+      line-height: 31px;
+    }
     &__icon {
       flex: 0;
     }
@@ -128,6 +193,8 @@
       }
     }
     &__title {
+      font-size: 22px;
+      line-height: 28px;
       text-align: center;
     }
     &__text {
@@ -140,11 +207,28 @@
     &__text {
       width: 100%;
     }
+    &__phrase {
+      font-size: 22px;
+      line-height: 28px;
+    }
     &__list {
       &-column {
         width: 285px;
         height: 101px;
+        margin-bottom: 70px;
       }
     }
+    &__title {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  .xs-visible {
+    display: flex;
+  }
+
+  .xs-hidden {
+    display: none;
   }
 }
