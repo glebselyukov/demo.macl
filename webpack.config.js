@@ -10,7 +10,8 @@ const paths = {
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        main: './index.js'
+        main: './index.js',
+        vendor: 'vue'
         // page_single: './page_single.js'
         //     [
         //     // 'webpack-dev-server/client?' + require("ip").address() + ':8080/',
@@ -21,6 +22,10 @@ module.exports = {
     },
     module: {
         loaders: [
+            {
+                test: /\.html$/,
+                loader: 'file-loader?name=[name].[ext]'
+            },
             {
                 test: [/\.js$/, /\.es6$/],
                 loader: 'babel-loader'
@@ -65,6 +70,12 @@ module.exports = {
                 loader: 'file-loader?publicPath=../&name=./assets/fonts/[name].[ext]'
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            'vue$': 'vue/dist/vue.js'
+        }
     },
     output: {
         path: path.resolve(__dirname, 'dist/'),
