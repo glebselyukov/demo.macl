@@ -25,6 +25,9 @@ body {
   width: 100%;
   //height: 780px;
   margin-top: 50px;
+  &__content {
+    height: auto;
+  }
   &__inner {
     justify-content: center;
     width: 100%;
@@ -117,7 +120,7 @@ body {
 }
 
 .section-2 {
-  height: 100%;
+  height: auto;
   overflow: hidden;
   &__inner {
     display: flex;
@@ -198,9 +201,10 @@ body {
       font-size: 90px;
       font-weight: 800;
       line-height: 80px;
-      color: transparent;
-      background-image: radial-gradient(50% 100%, #8951BC 50%, #6C5FB4 100%);
-      -webkit-background-clip: text;
+      color: rgba(137, 81, 188, 1);
+      //color: transparent;
+      //background-image: radial-gradient(50% 100%, rgba(137, 81, 188, 1) 50%, rgba(108, 95, 1) 100%);
+      //-webkit-background-clip: text;
       margin-bottom: 20px;
       &--type {
         letter-spacing: 0;
@@ -338,7 +342,7 @@ body {
 }
 
 .section-3 {
-  height: 100%;
+  height: auto;
   font-family: 'Lato';
   &__inner:extend(.section-2__inner) {}
   &__row:extend(.section-2__row) {
@@ -433,6 +437,7 @@ body {
         display: flex;
         flex-flow: column wrap;
         height: 100%;
+        width: 180px;
       }
       &--item-2:extend(&--item-1) {}
     }
@@ -455,7 +460,7 @@ body {
 }
 
 .section-4 {
-  height: 100%;
+  height: auto;
   font-family: 'Lato';
   &__inner:extend(.section-2__inner) {}
   &__row:extend(.section-2__row) {
@@ -533,11 +538,12 @@ body {
 }
 
 .section-5 {
-  height: 100%;
+  height: auto;
   font-family: 'Lato';
   &__row:extend(.section-2__row) {  }
   &__row {
     width: 100%;
+    height: auto;
     flex-flow: column wrap;
     &--item:extend(.section-3__row--item) {}
   }
@@ -612,9 +618,16 @@ body {
   }
   &__list-column:extend(.section-3__list-column) {}
   &__list-column {
+    width: 400px;
     height: 109px;
     &--item-1:extend(.section-3__list-column--item-1) {}
+    &--item-1 {
+      width: 200px;
+    }
     &--item-2:extend(.section-3__list-column--item-2) {}
+    &--item-2 {
+      width: 200px;
+    }
   }
   &__list {
     &-item:extend(.section-3__list-item) {}
@@ -624,7 +637,7 @@ body {
 }
 
 .section-6 {
-  height: 100%;
+  height: auto;
   font-family: 'Lato';
   &__inner:extend(.section-2__inner) {}
   &__row:extend(.section-2__row) {
@@ -708,7 +721,7 @@ body {
 }
 
 .section-7 {
-  height: 100%;
+  height: auto;
   &__inner:extend(.section-2__inner) {}
   &__row:extend(.section-2__row) {}
   &__row {
@@ -779,7 +792,7 @@ body {
 }
 
 .section-8 {
-  height: 100%;
+  height: auto;
   &__inner:extend(.section-2__inner) {}
   &__row:extend(.section-2__row) {}
   &__row {
@@ -850,7 +863,7 @@ body {
 }
 
 .section-9 {
-  height: 100%;
+  height: auto;
   &__row:extend(.section-2__row) {}
   &__row {
     width: 896px;
@@ -909,12 +922,14 @@ body {
   }
   &__list-column--item-1 {
     display: flex;
-    height: 100%;
+    width: 140px;
+    height: auto;
     flex-flow: column wrap;
   }
   &__list-column--item-2 {
     display: flex;
-    height: 100%;
+    width: 140px;
+    height: auto;
     flex-flow: column wrap;
   }
   &__list-item:extend(.section-3__list-item) {}
@@ -1006,7 +1021,7 @@ ul.tabs li.current::after {
 
 @media (max-width: 1350px) {
   .section-5 {
-    height: 100%;
+    height: auto;
     &__inner {
       width: @tablet-area;
     }

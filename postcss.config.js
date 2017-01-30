@@ -210,7 +210,8 @@ module.exports = {
             ]
         },
         'postcss-cssnext': {
-            browsers: ['last 5 versions', '> 1%']
+            // browsers: ['last 5 versions', '> 1%']
+            browsers: ['last 5 versions', 'safari 5', 'ie 11', 'opera 12.1', 'ios 6', 'android 4']
         }
     }
 };

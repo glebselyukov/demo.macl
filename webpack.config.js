@@ -41,7 +41,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.(jpg|jpeg|gif|png)$/,
+                test: /\.(jpg|jpeg|gif|png|svg)$/,
                 exclude: /node_modules/,
                 loaders: [
                     'file-loader?publicPath=../&name=./assets/images/[name].[ext]',
