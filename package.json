@@ -1,11 +1,12 @@
 {
   "name": "demo.macleaner.com",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "macleaner",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --inline --hot --progress"
+    "dev": "webpack-dev-server --inline --hot --progress",
+    "prod": "NODE_ENV=production webpack --progress --hide-modules"
   },
   "keywords": [
     "css",
@@ -45,15 +46,18 @@
     "less-loader": "^2.2.3",
     "node-libs-browser": "^2.0.0",
     "postcss": "^5.2.10",
+    "postcss-clean": "^1.0.2",
     "postcss-cssnext": "^2.9.0",
     "postcss-font-magician": "^1.6.0",
     "postcss-import": "^9.1.0",
     "postcss-less-engine": "^0.6.2",
     "postcss-loader": "^1.2.2",
+    "postcss-safe-parser": "^2.0.0",
     "postcss-sorting": "^2.0.1",
     "resolve-url-loader": "^1.6.1",
     "source-map-loader": "^0.1.6",
     "style-loader": "^0.13.1",
+    "unminified-webpack-plugin": "^1.2.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.7",
     "webpack-dev-server": "^2.2.0-rc.0",

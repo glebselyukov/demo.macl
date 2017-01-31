@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const paths = {
     root: path.resolve('.'),
     npm: path.resolve('.', '/node_modules'),
@@ -34,7 +35,7 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract({
-                    loader: 'css-loader?importLoaders=1!postcss-loader'
+                    loader: 'css-loader?importLoaders=1&minimize=true!postcss-loader'
                 })
             },
             {
@@ -42,7 +43,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract({
                     fallbackLoader: 'style-loader',
-                    loader: "css-loader!less-loader!postcss-loader"
+                    loader: "css-loader?importLoaders=2&minimize=true!less-loader!postcss-loader"
                 })
             },
             {
@@ -79,11 +80,27 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        filename: '[name].bundle.js'
+        filename: process.env.NODE_ENV === 'production' ? '[name].bundle.min.js' : '[name].bundle.js'
     },
-    plugins: [
+
+    plugins: process.env.NODE_ENV === 'production' ? [
+        new ExtractTextPlugin('[name].bundle.min.css'),
+        new webpack.optimize.UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true,
+            beautify: false,
+            comments: false,
+            compress: {
+                warnings: false,
+                drop_console: true
+            },
+            mangle: {
+                except: ['$super', '$', 'exports', 'require'],
+                screw_ie8 : true,
+                keep_fnames: true,
+            }
+        })
+    ] : [
         new ExtractTextPlugin('[name].bundle.css'),
-        // new webpack.HotModuleReplacementPlugin(),
-        // new webpack.NoEmitOnErrorsPlugin()
-    ]
+    ],
 };

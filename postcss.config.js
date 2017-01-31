@@ -1,5 +1,6 @@
 module.exports = {
     plugins: {
+        'postcss-safe-parser': {},
         'postcss-import': {},
         'postcss-font-magician': {},
         'postcss-sorting': {
