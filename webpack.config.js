@@ -25,7 +25,9 @@ module.exports = {
         loaders: [
             {
                 test: /\.html$/,
-                loader: 'file-loader?name=[name].[ext]'
+                loader: ExtractTextPlugin.extract({
+                    loader: 'file-loader?name=[name].[ext]'
+                })
             },
             {
                 test: [/\.js$/, /\.es6$/],
