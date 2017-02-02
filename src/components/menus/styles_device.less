@@ -4,12 +4,15 @@
 
 @media (max-width: @device) {
   .header {
+    height: 90px;
+    font-size: 16px;
     &__nav {
       &--first {
         width: 250px;
       }
     }
     &__phrases {
+      font-size: 16px;
       &:last-child {
         display: none;
       }
@@ -17,11 +20,16 @@
         display: inline-flex;
         flex: 2;
         width: auto;
+        font-size: 16px;
       }
     }
     &__href {
       display: flex;
       align-items: center;
+    }
+    &__logo {
+      width: 31px;
+      height: 31px;
     }
   }
 }
